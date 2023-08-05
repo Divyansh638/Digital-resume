@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Status Codes</title>
+    <link rel="stylesheet" href="/styles/blogsheet.css">
+</head>
+<body>
+    <div class="main-container">
+        <h2>HTTP Status Codes</h2>
+        <div class="intro">
+            <p>In this article I'll discuss about HTTP Status Codes. It comes handy to know about these things in Computer Networks and In-General about 'How Web works' 🚀 </p>
+
+             <p><strong>Please Note </strong>: I expect you to have knowledge about Req-Res cycle of HTTP and basic understanding of HTTP Methods (GET,PUT,POST,DELETE).</p>
+        </div>
+
+        <div class="content">
+            <h3>In this article, I covered the following topics:</h3>
+
+            <ul>
+               <a href="#first"> <li > Why you need HTTP Status Code ?</li></a> 
+                <a href="#second"><li>What is HTTP Status Code ?</li></a>
+                <a href="#third"><li>Frequently encountered Status Codes</li></a>
+                <a href="#fourth"><li>Types of Status Codes</li></a>
+                <a href="#fifth"><li>Some important Status Code to know about</li></a>
+            </ul>
+            
+        </div>
+
+        <div class="topic-container">
+            <div class="topic-container-list">
+                <h4 class="sub-heading" id="first">Why you need HTTP Status Code ?</h4>
+                <div class="topic-content" id="first">
+                    <p>
+                        Let's say you've created a system that uses an api to retrieve weather information. Imagine the server responded and you did'nt get the desired response to your request. Now you are unsure of exactly what went wrong.🙆. It might be the page you requested is not found (404) or the page you requested is moved to completely different address (301).
+                     </p>
+    
+                     <p>
+                        So, HTTP Status Codes are short messages that the server sends to tell you what happened when you asked it to do something. It's a way of communicating to client what excatly is happening at server side.
+                     </p>
+    
+                     <p>
+                        For example : Imagine you're trying to talk to a robot 🤖 , and you want ROBOT to do something for you. So HTTP Status code is like the robot's way of saying, "Hey, I did what you wanted!" or "Oops, something went wrong."
+                     </p>
+                </div>
+                 
+            </div>
+
+            <div class="topic-container-list">
+                <h4 class="sub-heading" id="second">What is HTTP Status Code ?</h4>
+                <div class="topic-content" >
+                    <p>
+                        <strong>Formal Definition :</strong>
+                        HTTP Status Code is a three-digit integer code that describes the result of the request and the semantics of the response, including whether the request was successful and what content is enclosed (if any). All valid status codes are within the range of [100 to 599].
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-container-list">
+                <h4 class="sub-heading" id="third">Frequently encountered Status Codes</h4>
+                <div class="topic-content" >
+                    <p>
+                        Here are a few HTTP status codes and their explanations:
+                    </p>
+                    
+                    <p><strong>200 OK :</strong> This 200means everything is fine! It's like when you ask a question and get a clear answer.</p>
+
+                    <p><strong>404 Not Found :</strong>This is like when you're looking for a toy in your room, but you can't find it. The computer is saying that the web page you're looking for doesn't exist.</p>
+
+                    <p><strong>500 Internal Server Error:</strong> This is like when you ask a question, but the person you're asking doesn't know the answer. The computer is saying that something went wrong on the website's server.</p>
+
+                    <p><strong>301 Moved Permanently :</strong> This is like when you move to a new house and leave a note on your old door saying, "I've moved to a new address." The computer is saying that the web page you're looking for has permanently moved to a new location.</p>
+
+                    <p><strong>403 Forbidden :</strong> This is like when you want to enter a room, but there's a sign on the door saying, "No entry allowed." The computer is saying that you don't have permission to access the web page.</p>
+
+                </div>
+            </div>
+
+            <div class="topic-container-list">
+                <h4 class="sub-heading" id="fourth">
+                    Types of Status Codes
+                </h4>
+                <div class="topic-content">
+                    <p>HTTP status codes are divided into 5 classes based on the first digit of the status code:</p>
+
+                    <ul>
+                        <li>1xx (100-199) – informational – the request was received, continuing process</li>
+                        <li>2xx (200-299)– successful – the request was received successfully and accepted</li>
+                        <li>3xx (300-399)– redirection – further action needs to be taken to complete the request</li>
+                        <li>4xx (400-499)– client error – request contains bad syntax or cannot be fulfilled</li>
+                        <li>5xx (500-599) – server error – the server failed to fulfill an apparently valid request</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="topic-container-list">
+                <h4 class="sub-heading" id="fifth">
+                    Some important Status Code to know about
+                </h4>
+                <div class="topic-content" >
+                    <div class="sub-content">
+                        <h5 >
+                            2xx : Successful
+                        </h5>
+
+                        <ul>
+                            <li><p>
+                                200 Ok : The request succeeded
+                            </p></li>
+                            <li><p>
+                                201 Created : The request succeeded, and a new resource was created as a result. This is typically the response sent after POST requests, or some PUT requests.
+                            </p></li>
+                            <li><p>
+                                203 Non-Authoritative Information : Indicates that the server successfully processed the request, but the returned information may be from a third-party source rather than the original server. This status code is typically used in a proxy or gateway scenario, where the server is acting as an intermediary between the client and another server.
+                            </p></li>
+                            <li><p>
+                                204 No Content : Indicates that the server has successfully processed the request, but there is no content to send back in the response payload. It is typically used for requests that do not require a response body, such as a successful DELETE request.
+                            </p></li>
+                        </ul>
+                    </div>
+                    <div class="sub-content">
+                        <h5>
+                            3xx : Redirection Messages
+                        </h5>
+
+                        <ul>
+                            <li><p>
+                                300 Multiple Choices : Indicates that the requested resource has multiple representations available, each with its own specific location. The server includes a list of alternative representations in the response, and the client can choose one of them.
+                            </p></li>
+                            <li><p>
+                                301 Moved Permanently : It is used when a resource has been permanently moved to a new location. When a client receives a 301 status code, it should update its bookmarks or links to the new URL provided in the response.
+                            </p></li>
+                            <li><p>
+                                302 Found : Indicates a temporary redirect. It is used when a resource has been temporarily moved to a different URL. When a client receives a 302 status code, it should typically follow the redirect and make a request to the new URL provided in the response.
+                            </p></li>
+                        </ul>
+                    </div>
+                    <div class="sub-content">
+                        <h5>
+                            4xx : Client-Side Error
+                        </h5>
+
+                        <ul>
+                            <li><p>
+                                400 Bad Request : Indicates a "Bad Request" error. It means that the server cannot process the request due to invalid syntax or missing required parameters in the client's request. This status code is typically returned when the server is unable to understand the request sent by the client.
+                            </p></li>
+                            <li><p>
+                                401 Unauthorized Access : Indicates that the client making the request is unauthorized to access the requested resource. It is typically used when authentication is required and the client has not provided valid credentials or has provided credentials that are not sufficient to access the resource.
+
+
+                            </p></li>
+                            <li><p>
+                                403 Forbidden : Indicates that the server understood the request, but refuses to authorize it. This status code is typically used when the server recognizes the user's identity and authentication credentials, but the user does not have sufficient permissions to access the requested resource.
+                            </p></li>
+
+                            <li><p>
+                                404 Not Found : Indicates that the requested resource could not be found on the server. It is a standard HTTP response status code that is returned when the server cannot locate the requested resource, typically due to a broken or dead link, or a mistyped URL.
+                            </p></li>
+                        </ul>
+                    </div>
+                    <div class="sub-content">
+                        <h5>
+                            5xx : Server Side Error
+                        </h5>
+
+                        <ul>
+                            <li><p>
+                                500 Internal Server Error : The server has encountered a situation it does not know how to handle.
+                            </p></li>
+                            <li><p>
+                                502 Bad Gateway : It means that the server acting as a gateway or proxy received an invalid response from an upstream server. This can happen for various reasons, such as the upstream server being temporarily unavailable, timing out, or returning an invalid response. It might be resolved by refreshing the page.
+                            </p></li>
+                            <li><p>
+                                504 Gateway Timeout : It typically means that the server acting as a gateway or proxy is not able to establish a connection with the upstream server within a specified time limit.
+                            </p></li>
+                            <li><p>
+                                505 HTTP Version Not Supported : The HTTP version used in the request is not supported by the server.
+                            </p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+
+</body>
+</html>
